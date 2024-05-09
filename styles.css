@@ -1,0 +1,113 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+nav {
+  background-color: #333;
+  color: white;
+  text-align: end;
+  padding: 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0);
+  border: hidden;
+  height: 40px;
+  line-height: 40px;
+  width: auto;
+  margin-right: 10px;
+  padding: 0 10px;
+}
+nav ul li:hover {
+  background-color: rgba(128, 128, 128, 1);
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+section {
+  padding: 60px 20px;
+  min-height: 100vh;
+  padding-top: 80px; /* Space for nav */
+}
+
+h1 {
+  margin: 0;
+  color: #333;
+}
+
+#section1 {
+  background-color: rgba(49, 58, 49, 0.5);
+}
+
+#section2 {
+  background-color: rgba(201, 22, 22, 0.5);
+}
+
+#section3 {
+  background-color: rgba(19, 31, 197, 0.5);
+}
+
+.slider {
+  overflow: hidden;
+  width: 100%; /* Set the width of the slider to full viewport width */
+  max-width: 600px; /* Optional: Limit the maximum width */
+  margin: 20px auto;
+  position: relative;
+}
+
+.slide-track {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.slide {
+  flex: 0 0 100%; /* Ensure each slide is the same width as the slider */
+  overflow: hidden; /* Prevent any overflow from the slide */
+}
+
+.slide img {
+  width: 100%; /* Ensure images fill the slide */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove any space below the image */
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #eee;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
