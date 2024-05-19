@@ -1,25 +1,19 @@
 // script.js
-document.addEventListener("DOMContentLoaded", function () {
-  const track = document.querySelector(".slide-track");
-  let currentIndex = 0;
-  const maxIndex = track.children.length - 1;
-  const slideWidth = track.children[0].offsetWidth;
+$(document).ready(function () {
+  // Collapse navbar on link click if navbar is expanded
+  var collapseNavBar = function () {
+    $(".navbar-collapse").collapse("hide");
+  };
 
-  function updateSlidePosition() {
-    track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-  }
+  $(".navbar-nav>li>a, .navbar-brand").click(collapseNavBar);
 
-  document.querySelector(".next").addEventListener("click", function () {
-    if (currentIndex < maxIndex) {
-      currentIndex++;
-      updateSlidePosition();
-    }
-  });
-
-  document.querySelector(".prev").addEventListener("click", function () {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateSlidePosition();
+  // Collapse navbar when clicking outside of it
+  $(document).click(function (event) {
+    var clickover = $(event.target);
+    var $navbar = $(".navbar-collapse");
+    var _opened = $navbar.hasClass("show");
+    if (_opened === true && !clickover.closest(".navbar").length) {
+      $(".navbar-toggler").click();
     }
   });
 });

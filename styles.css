@@ -5,41 +5,46 @@ html {
   scroll-behavior: smooth;
 }
 
-nav {
-  background-color: #333;
-  color: white;
-  text-align: end;
-  padding: 0;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-}
-
-nav ul {
-  list-style: none;
+.navbar,
+footer {
   padding: 0;
   margin: 0;
+  background-color: #333;
+  color: #e2b69c;
 }
 
-nav ul li {
-  display: inline-block;
-  background-color: rgba(0, 0, 0, 0);
-  border: hidden;
-  height: 40px;
-  line-height: 40px;
-  width: auto;
-  margin-right: 10px;
-  padding: 0 10px;
-}
-nav ul li:hover {
-  background-color: rgba(128, 128, 128, 1);
-}
-
-nav ul li a {
-  color: white;
+.navbar-brand {
+  display: flex; /* Sets the layout to Flexbox */
+  align-items: bottom; /* Centers items vertically */
+  gap: 0.1em; /* Optional: adds space between the icon and the text */
   text-decoration: none;
-  font-size: 16px;
+  color: #e2b69c;
+}
+
+.navbar-brand:hover {
+  color: #e2b69c;
+}
+
+.navbar-brand i {
+  font-size: 1.2em; /* Adjust the icon size as needed */
+}
+
+#dropdownMenuButton {
+  border: none;
+  background: none; /* Transparent background */
+  color: #e2b69c;
+}
+
+.navbar-nav {
+  align-items: flex-end;
+}
+
+.nav-link {
+  color: #e2b69c;
+  font-size: 1.2rem;
+  font-family: monospace;
+  font-weight: bold;
+  font-style: italic;
 }
 
 section {
@@ -53,61 +58,76 @@ h1 {
   color: #333;
 }
 
-#section1 {
-  background-color: rgba(49, 58, 49, 0.5);
+section {
+  background: rgb(75, 52, 39);
+  background: radial-gradient(
+    circle,
+    rgba(75, 52, 39, 1) 0%,
+    rgba(215, 192, 174, 1) 80%,
+    rgba(192, 160, 98, 1) 100%
+  );
 }
 
-#section2 {
-  background-color: rgba(201, 22, 22, 0.5);
-}
-
-#section3 {
-  background-color: rgba(19, 31, 197, 0.5);
-}
-
-.slider {
-  overflow: hidden;
-  width: 100%; /* Set the width of the slider to full viewport width */
-  max-width: 600px; /* Optional: Limit the maximum width */
-  margin: 20px auto;
+.home-section {
   position: relative;
+  overflow: hidden;
 }
 
-.slide-track {
-  display: flex;
-  transition: transform 0.3s ease;
+.home-section img {
+  height: 90vh;
+  object-fit: cover;
+  width: 100%;
 }
 
-.slide {
-  flex: 0 0 100%; /* Ensure each slide is the same width as the slider */
-  overflow: hidden; /* Prevent any overflow from the slide */
-}
-
-.slide img {
-  width: 100%; /* Ensure images fill the slide */
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Remove any space below the image */
-}
-
-button {
+.home-section .home-text {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  font-family: sans-serif;
+  margin: 2vh;
+  color: white;
 }
 
-button:hover {
-  background-color: #eee;
+.home-text h2 {
+  font-weight: bold;
 }
 
-.prev {
-  left: 10px;
+#about h2 {
+  font-weight: bold; /* Ensures the header stands out */
+  margin-bottom: 0.5em; /* Adds space between the header and paragraph */
 }
 
-.next {
-  right: 10px;
+#about h2 p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333; /* Dark grey for readability */
+}
+
+.about-image {
+  border-radius: 8px; /* Softens the edges */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for depth */
+}
+
+#demo {
+  max-height: 90vh;
+}
+
+#demo .carousel-item img {
+  height: 90vh;
+  object-fit: cover;
+  width: 100%;
+}
+
+.carousel-caption {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent background for better visibility */
+  color: white; /* Ensures text is bright and visible */
+  padding: 10px; /* Adds space around the text */
+  border-radius: 5px; /* Softens the edges of the caption background */
+}
+
+.card {
+  background-color: rgba(252, 249, 249, 0.5);
 }
