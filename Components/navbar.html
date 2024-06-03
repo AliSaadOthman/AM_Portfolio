@@ -1,0 +1,65 @@
+<!--Navigation bar with collapsing navigation items on small screens-->
+<nav class="navbar fixed-top navbar-expand-lg">
+  <div class="container-fluid">
+    <div class="navbar-brand" href="#home" aria-label="Go to home page">
+      <img src="../Assets/AM_Logo.png" alt="Logo" />
+    </div>
+    <button
+      class="navbar-toggler"
+      type="button"
+      id="dropdownMenuButton"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fa-solid fa-list"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html" id="navHome"
+            ><i class="fa-solid fa-house"></i> Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)" id="navAbout"
+            ><i class="fa-solid fa-address-card"></i> About</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../Pages/projects.html" id="navProjects"
+            ><i class="fa-solid fa-code"></i> Projects</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)" id="navContact"
+            ><i class="fa-solid fa-address-book"></i> Contact</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script>
+  $(document).ready(function () {
+    // Collapse navbar on link click if navbar is expanded
+    var collapseNavBar = function () {
+      $(".navbar-collapse").collapse("hide");
+    };
+
+    $(".navbar-nav>li>a, .navbar-brand").click(collapseNavBar);
+
+    // Collapse navbar when clicking outside of it
+    $(document).click(function (event) {
+      var clickover = $(event.target);
+      var $navbar = $(".navbar-collapse");
+      var _opened = $navbar.hasClass("show");
+      if (_opened === true && !clickover.closest(".navbar").length) {
+        $(".navbar-toggler").click();
+      }
+    });
+  });
+</script>

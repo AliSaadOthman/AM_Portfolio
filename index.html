@@ -3,15 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Stellar Coffee Co. offers the finest selection of freshly roasted coffee beans delivered straight to your door. Discover our blends and single-origin coffees today."
-    />
-    <meta
-      name="keywords"
-      content="Stellar Coffee, Fresh Coffee Beans, Coffee Delivery, Gourmet Coffee, Coffee Blends, Single-Origin Coffee"
-    />
-    <title>Stellar Coffee Co. | Your Day Starts with Stellar</title>
+    <title>Ali Mohamed | Portfolio</title>
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
@@ -21,207 +13,71 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap JS with Popper.js (optional, for components like dropdowns, modals, tooltips) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Include js-cookie library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
     <!-- Include a link to your CSS file -->
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./Styles/indexStyles.css" />
   </head>
   <body>
     <header>
-      <!--Navigation bar with collapsing navigation items on small screens-->
-      <nav class="navbar fixed-top navbar-expand-lg">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#home" aria-label="Go to home page">
-            <i class="fa-solid fa-mug-hot"></i>
-            Stellar Coffee Co.
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            id="dropdownMenuButton"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <i class="fa-solid fa-list"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="#home">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#about">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#products">Products</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <div id="navbar"></div>
     </header>
     <main>
-      <section id="home">
-        <div class="home-section d-flex justify-content-center">
+      <section
+        class="d-flex align-items-center justify-content-center"
+        id="Introduction"
+      >
+        <div class="card text-center homecard">
           <img
-            src="Assets/cup-of-coffee-on-table.jpg"
-            class="img-fluid"
-            alt="High-quality image of a coffee cup on a table."
+            src="./Assets/LargeHero_Image.avif"
+            class="card-img-top"
+            alt="..."
           />
-          <div class="home-text text-center">
-            <h2>Craft Your Perfect Morning.</h2>
-            <button class="btn btn-primary btn-lg" type="button">
-              Shop Now
-            </button>
-          </div>
-        </div>
-      </section>
-      <section id="about">
-        <div class="row">
-          <div class="col-md-6 col-sm-12">
-            <h2>Welcome to Stellar Coffee Co.</h2>
-            <p>
-              Since 2010, we've been passionate about delivering the best
-              possible coffee experience. Based in Portland, we roast our coffee
-              to perfection and deliver it fresh.
+          <div class="card-body">
+            <h5 class="card-title">Ali Mohamed</h5>
+            <p class="card-text">
+              Software Engineer | Web Application & Machine Learning Developer
             </p>
+            <a href="#" class="btn btn-primary">Request Project</a>
           </div>
-          <div class="col-md-6 col-sm-12">
-            <img
-              src="Assets/cup-of-coffee-on-table.jpg"
-              class="img-fluid about-image"
-              alt="High-quality image of a coffee cup on a table."
-            />
-          </div>
-        </div>
-      </section>
-      <section id="products">
-        <!-- Carousel -->
-        <div id="demo" class="carousel slide" data-bs-ride="carousel">
-          <!-- Indicators/dots -->
-          <div class="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#demo"
-              data-bs-slide-to="0"
-              class="active"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#demo"
-              data-bs-slide-to="1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#demo"
-              data-bs-slide-to="2"
-            ></button>
-          </div>
+          <div class="card-footer bg-transparent d-flex justify-content-center">
+            <a
+              class="me-2"
+              href="#"
+              style="text-decoration: none; color: white"
+            >
+              <i
+                class="fa-brands fa-linkedin fa-beat"
+                style="font-size: xx-large"
+              ></i
+            ></a>
 
-          <!-- The slideshow/carousel -->
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img
-                src="Assets/Arabica-Coffee.jpg"
-                alt="Arabica Coffee Beans"
-                class="d-block w-100"
-              />
-              <div class="carousel-caption">
-                <h3>Arabica Coffee Beans</h3>
-                <p>
-                  Experience the subtle flavors and complex aroma of our premium
-                  Arabica beans, sourced from the high-altitude estates of
-                  Colombia.
-                </p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img
-                src="Assets/Brazilian-Coffee.jpeg"
-                alt="Brazilian Coffee Beans"
-                class="d-block w-100"
-              />
-              <div class="carousel-caption">
-                <h3>Brazilian Coffee Beans</h3>
-                <p>
-                  Savor the bold and smooth notes of our Brazilian coffee,
-                  perfectly roasted to bring out a rich symphony of flavors.
-                </p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img
-                src="Assets/Dark-Roast-Coffee.jpg"
-                alt="Dark Roast Coffee Beans"
-                class="d-block w-100"
-              />
-              <div class="carousel-caption">
-                <h3>Dark Roast Coffee Beans</h3>
-                <p>
-                  Delve into the deep, dark essence of our Dark Roast, offering
-                  a robust and intense coffee experience with every sip.
-                </p>
-              </div>
-            </div>
-          </div>
+            <a
+              class="ms-2 me-2"
+              href="#"
+              style="text-decoration: none; color: white"
+            >
+              <i
+                class="fa-brands fa-github fa-beat"
+                style="font-size: xx-large"
+              ></i
+            ></a>
 
-          <!-- Left and right controls/icons -->
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#demo"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon"></span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#demo"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon"></span>
-          </button>
-        </div>
-      </section>
-      <section id="contact">
-        <div class="row">
-          <div class="col-md-6 col-sm-12">
-            <div class="card mb-2">
-              <div class="card-body">
-                <h5 class="card-title">Contact Us</h5>
-                <div class="card-text">
-                  Have questions or need customer support? Contact us at
-                  <a href="mailto:support@stellarcoffeeco.com"
-                    >support@stellarcoffeeco.com</a
-                  >
-                  or visit us at our main office in Portland, Oregon.
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d221164.8858401276!2d32.20983159453124!3d29.988011999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14562fb47eb839cb%3A0x6d4e033773db7535!2sStella%20Caff%C3%A8!5e0!3m2!1sen!2seg!4v1715524369711!5m2!1sen!2seg"
-              width="100%"
-              height="450"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
+            <a
+              class="ms-2"
+              href="#"
+              style="text-decoration: none; color: white"
+            >
+              <i
+                class="fa-brands fa-x-twitter fa-beat"
+                style="font-size: xx-large"
+              ></i>
+            </a>
           </div>
         </div>
       </section>
     </main>
-    <footer>
-      <p>© 2024 Stellar Coffee Co. All rights reserved.</p>
-      <p>Follow us on <a href="#">Social Media</a></p>
-    </footer>
 
     <script src="script.js"></script>
     <script

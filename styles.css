@@ -2,132 +2,89 @@ body,
 html {
   margin: 0;
   padding: 0;
+  background: none;
   scroll-behavior: smooth;
 }
 
-.navbar,
-footer {
+.navbar {
   padding: 0;
   margin: 0;
-  background-color: #333;
-  color: #e2b69c;
+  background-color: rgb(216, 219, 224);
+  height: auto;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 1030;
+  display: flex;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  justify-content: center;
+  text-align: center;
 }
 
 .navbar-brand {
-  display: flex; /* Sets the layout to Flexbox */
-  align-items: bottom; /* Centers items vertically */
-  gap: 0.1em; /* Optional: adds space between the icon and the text */
-  text-decoration: none;
-  color: #e2b69c;
+  display: flex;
+  align-items: bottom;
+  width: 10%;
 }
 
-.navbar-brand:hover {
-  color: #e2b69c;
-}
-
-.navbar-brand i {
-  font-size: 1.2em; /* Adjust the icon size as needed */
+.navbar-brand img {
+  width: 70%;
+  height: auto;
+  padding: 2px;
 }
 
 #dropdownMenuButton {
   border: none;
   background: none; /* Transparent background */
-  color: #e2b69c;
+  color: black;
 }
 
-.navbar-nav {
-  align-items: flex-end;
+.nav-item {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .nav-link {
-  color: #e2b69c;
-  font-size: 1.2rem;
+  color: black;
+  border-bottom: 1px solid black;
+  font-size: 1.5rem;
   font-family: monospace;
   font-weight: bold;
   font-style: italic;
 }
 
+.nav-link:hover {
+  color: #5ac8fa;
+}
+
+.navbar-nav {
+  margin-left: auto;
+  padding-right: 2vw;
+  padding-left: 2vw;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand img {
+    min-width: 150%;
+    height: auto;
+  }
+
+  .nav-link {
+    font-size: 1.2rem;
+  }
+}
+
 section {
   padding: 60px 20px;
+  padding-top: 20vh;
   min-height: 100vh;
-  padding-top: 80px; /* Space for nav */
-}
-
-h1 {
-  margin: 0;
-  color: #333;
-}
-
-section {
-  background: rgb(75, 52, 39);
-  background: radial-gradient(
-    circle,
-    rgba(75, 52, 39, 1) 0%,
-    rgba(215, 192, 174, 1) 80%,
-    rgba(192, 160, 98, 1) 100%
-  );
-}
-
-.home-section {
-  position: relative;
   overflow: hidden;
-}
-
-.home-section img {
-  height: 90vh;
-  object-fit: cover;
-  width: 100%;
-}
-
-.home-section .home-text {
-  position: absolute;
-  font-family: sans-serif;
-  margin: 2vh;
-  color: white;
-}
-
-.home-text h2 {
-  font-weight: bold;
-}
-
-#about h2 {
-  font-weight: bold; /* Ensures the header stands out */
-  margin-bottom: 0.5em; /* Adds space between the header and paragraph */
-}
-
-#about h2 p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #333; /* Dark grey for readability */
-}
-
-.about-image {
-  border-radius: 8px; /* Softens the edges */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for depth */
-}
-
-#demo {
-  max-height: 90vh;
-}
-
-#demo .carousel-item img {
-  height: 90vh;
-  object-fit: cover;
-  width: 100%;
-}
-
-.carousel-caption {
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* Semi-transparent background for better visibility */
-  color: white; /* Ensures text is bright and visible */
-  padding: 10px; /* Adds space around the text */
-  border-radius: 5px; /* Softens the edges of the caption background */
-}
-
-.card {
-  background-color: rgba(252, 249, 249, 0.5);
+  background-image: url("../Assets/BackgroundImage.png");
+  background-size: cover;
+  background-position: center;
 }
