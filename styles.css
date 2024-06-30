@@ -4,6 +4,7 @@ html {
   padding: 0;
   background: none;
   scroll-behavior: smooth;
+  min-height: 100vh;
 }
 
 .navbar {
@@ -13,17 +14,60 @@ html {
   height: auto;
 }
 
-footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  z-index: 1030;
-  display: flex;
-  padding: 0.5rem;
-  font-size: 1.2rem;
-  justify-content: center;
+.footer {
+  background-color: rgb(216, 219, 224);
+}
+
+.footer h5 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer p,
+.footer ul,
+.footer li,
+.footer a {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: #333;
+}
+
+.footer .contacts,
+.footer .motivating-word,
+.footer .quick-links {
   text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.footer .quick-links ul {
+  padding-left: 0;
+}
+
+.footer .quick-links li {
+  margin-bottom: 10px;
+}
+
+.footer .quick-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-CTA-Button {
+  font-size: larger;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.footer-CTA-Button:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .navbar-brand {
@@ -51,15 +95,16 @@ footer {
 
 .nav-link {
   color: black;
-  border-bottom: 1px solid black;
   font-size: 1.5rem;
   font-family: monospace;
   font-weight: bold;
   font-style: italic;
+  transition: transform 0.3s ease;
 }
 
 .nav-link:hover {
   color: #5ac8fa;
+  transform: translateY(-5px);
 }
 
 .navbar-nav {

@@ -17,16 +17,26 @@
   font-size: 2rem;
 }
 
-.aboutcard {
-  display: none;
+.homecard {
+  animation: dropInResize 1s ease-out forwards;
 }
 
-.contactcard {
-  display: none;
+.home-CTA-Button {
+  font-size: larger;
+  background-color: rgb(216, 219, 224);
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
-.projectscard {
-  display: none;
+.home-CTA-Button:hover {
+  background-color: rgb(216, 219, 224);
+  color: #212529;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Animations */

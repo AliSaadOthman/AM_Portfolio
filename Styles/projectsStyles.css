@@ -1,0 +1,45 @@
+.carousel-image {
+  height: 50vh; /* Set a fixed height for all carousel images */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  animation: moveIn 1s ease-out forwards;
+}
+
+.card-body {
+  flex-grow: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #000; /* Set the fill color to black */
+}
+
+.card-preview-btn {
+  background-color: rgb(216, 219, 224);
+  font-weight: bold;
+  padding-left: 3%;
+  padding-right: 3%;
+  transition: transform 0.3s ease;
+}
+
+.card-preview-btn:hover {
+  background-color: rgb(216, 219, 224);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes moveIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ali Mohamed | Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- jQuery (needed for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS with Popper.js (optional, for components like dropdowns, modals, tooltips) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Include js-cookie library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+    <!-- Include EmailJS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <!-- Include a link to your CSS file -->
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./Styles/contactStyles.css" />
+  </head>
+  <body>
+    <header>
+      <div id="navbar"></div>
+    </header>
+    <main>
+      <section
+        class="justify-content-center align-items-center d-flex"
+        id="about"
+      >
+        <div class="about-container text-start">
+          <form class="row g-3 p-3" id="contactForm">
+            <div class="col-md-6">
+              <label for="inputFirstName" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="inputFirstName" />
+              <div class="invalid-feedback">Please enter your first name.</div>
+            </div>
+            <div class="col-md-6">
+              <label for="inputLastName" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="inputLastName" />
+              <div class="invalid-feedback">Please enter your last name.</div>
+            </div>
+            <div class="col-12">
+              <label for="inputEmail" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="inputEmail"
+                placeholder="name@gmail.com"
+              />
+              <div class="invalid-feedback">Please enter your email.</div>
+            </div>
+            <div class="col-12">
+              <label for="inputMessage" class="form-label">Message</label>
+              <textarea
+                class="form-control"
+                id="inputMessage"
+                rows="3"
+              ></textarea>
+              <div class="invalid-feedback">Please enter a message.</div>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">Send</button>
+            </div>
+          </form>
+          <!-- Toast Notification -->
+          <div
+            class="toast-container position-fixed bottom-0 end-0 p-3"
+            style="z-index: 11"
+          >
+            <div
+              id="thankYouToast"
+              class="toast"
+              role="alert"
+              aria-live="assertive"
+              aria-atomic="true"
+            >
+              <div class="toast-header">
+                <strong class="me-auto">Message Sent!</strong>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="toast"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="toast-body">Thank you for contacting me!</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div id="footer"></div>
+    </footer>
+    <script src="./script.js"></script>
+    <script src="./Scripts/contactScript.js"></script>
+    <script
+      src="https://kit.fontawesome.com/9a9d1d09d3.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
