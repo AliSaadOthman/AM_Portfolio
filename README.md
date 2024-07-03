@@ -1,4 +1,4 @@
-# Ali Mophamed Portfolio
+# Ali Mohamed Portfolio
 Welcome to my portfolio repository! This repository contains the source code for my personal portfolio website, showcasing my skills, projects, and contact information.
 
 ## Sections
@@ -7,13 +7,13 @@ Welcome to my portfolio repository! This repository contains the source code for
 - Projects: Showcase of projects I have worked on, including descriptions, technologies used, and links to live demos or repositories.
 - Contact: Contact information and a form to reach out to me directly.
 ## Technologies Used
-HTML5
-CSS3 (Sass for preprocessing)
-JavaScript (ES6+)
-Bootstrap 5
+- HTML5
+- CSS3 (Sass for preprocessing)
+- JavaScript (ES6+)
+- Bootstrap 5
 
 ## Contact Form
-The contact form is functional and allows visitors to send messages directly to my email. It uses Formspree or Netlify Forms for form handling and can be easily integrated with additional backend logic if needed.
+The contact form is functional and allows visitors to send messages directly to my email.
 
 ## Deployment
 My portfolio is deployed and accessible at [AM Portfolio](https://github.com/AliSaadOthman/AM_Portfolio).
