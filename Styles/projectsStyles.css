@@ -1,6 +1,9 @@
 .carousel-image {
   height: 50vh; /* Set a fixed height for all carousel images */
   object-fit: cover; /* Ensure the image covers the area without distortion */
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card {
