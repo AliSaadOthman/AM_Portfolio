@@ -129,7 +129,7 @@ section {
   padding-top: 20vh;
   min-height: 100vh;
   overflow: hidden;
-  background-image: url("../Assets/BackgroundImage.png");
+  background-image: url("./Assets/BackgroundImage.png");
   background-size: cover;
   background-position: center;
 }
